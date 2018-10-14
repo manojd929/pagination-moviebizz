@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Movie Buff</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 id="title">MovieBizz</h1>
+      <input type="text" class="header_search" placeholder="Search for Movie. Press Enter" id="search" />
+    </header>
+
+    <section class="movies_header_section">
+      <div class="nav_links nav_links_top"></div>
+      <div class="controls movies_header_section_controls">
+        <select class="sort-by" id="sort-by-select" name="Sort By">
+          <option class="sort-by-option" id="sort-by-none" value="none">Sort By</option>
+          <option class="sort-by-option" id="sort-by-name" value="name">Name</option>
+          <option class="sort-by-option" id="sort-by-like-count" value="like_count">Likes</option>
+        </select>
+        <button class="control-btn sort-order-btn active" id="sort-asc" data-content="asc">
+          &#x2191;
+        </button>
+        <button class="control-btn sort-order-btn" id="sort-desc" data-content="desc">
+          &#x2193;
+        </button>
+        &nbsp;&nbsp;&nbsp;
+        <button class="control-btn change-view-btn active" id="page-view">
+          Page view
+        </button>
+        <button class="control-btn change-view-btn" id="list-view">
+          List view
+        </button>
+      </div>
+    </section>
+
+    <section class="movies_section">
+    </section>
+
+    <footer class="footer">
+      Copyrights &copy; Mano. All Rights Reserved
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

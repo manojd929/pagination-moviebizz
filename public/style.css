@@ -1,0 +1,236 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #0083bb;
+  color: white;
+}
+
+/* ---------------Semantics -----------------------------*/
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header > #title {
+  cursor: pointer;
+}
+
+button, select {
+  cursor: pointer;
+}
+
+/* ------------------Main Header -----------------------------*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.header > h1 {
+  margin-left: 7rem;
+}
+
+.header > h1:hover {
+  transform: scale(1.15);
+  font-weight: bolder;
+}
+
+.header_search:last-child {
+  /* keeps last item/child always at the extreme end in flexbox */
+  margin-left: auto;
+}
+
+.header_search {
+  width: 250px;
+  height: 2rem;
+  border-radius: 2%;
+  padding: 2px;
+  background-color: #f9f9f9;
+}
+
+/* ------------------End of Main Header -----------------------------*/
+
+/* ------------------- Start of Movie section header -------------------*/
+
+.movies_header_section {
+  margin: 0.5em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_links {
+  margin-left: 6.5rem;
+}
+
+.nav_links__button.active {
+  transform: scale(1.05);
+  background-color: #eeeeee;
+}
+
+.controls {
+  margin-left: auto;
+}
+
+.sort-by {
+  display: inline-block;
+  width: 6rem;
+  height: 2rem;
+  padding: 2px;
+  border-radius: 5%;
+}
+
+.sort-by > option {
+  color: #f9f9f9;
+  background-color: #02a4e9;
+}
+
+.control-btn {
+  color: #202067;
+  font-weight: 400;
+  display: inline-block;
+  margin-right: 5px;
+  background-color:#bae1f2;
+  border: 1px solid #bae1f2;
+  border-radius: 5%;
+}
+
+.control-btn.active {
+  transform: scale(1.05);
+  background-color:#bae1e9;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #bae1f2;
+}
+
+.sort-order-btn {
+  width: 1.5rem;
+  height: 1.8rem;
+  margin: auto 0px;
+}
+
+.sort-order-btn:hover::after {
+  content: attr(data-content);
+  position: relative;
+  left: -90%;
+  color: #f9f9f9;
+}
+
+.change-view-btn {
+  width: 4.8rem;
+  height: 2rem;
+  margin-left: 5px;
+}
+
+/* ------------------- End of Movie section header -------------------*/
+
+.movies_section {
+  display: grid;
+  grid-template-columns: 31% 31% 31%;
+  grid-template-rows: 1fr;
+  grid-gap: 2em;
+  justify-content: center;
+
+  margin-top: 2rem;
+}
+
+.footer {
+  text-align: right;
+  margin: 1.5em;
+  border-top: 1px solid white;
+}
+
+/* --------------- End of Semantics -----------------------------*/
+
+
+/* --------------- Card Styling -----------------------------*/
+.movie_card {
+  justify-self: center;
+  width: 15em;
+  height: 15em;
+  border-radius: 2%;
+  background-color: #bdbdbe;
+  color: #fcfcfc;
+  background-size: contain;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+/* w3school reference for card flip */
+/* This container is needed to position the front and back side */
+.movie_card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.movie_card:hover .movie_card__inner {
+  transform: rotateY(180deg);
+  box-shadow: 2px 2px 2px 2px #8e95b5;
+}
+
+/* Position the front and back side */
+.movie_card__front, .movie_card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the back side */
+.movie_card__back {
+  background-color: dodgerblue;
+  color: #fcfcfc;
+  transform: rotateY(180deg);
+}
+
+
+.movie_card__ul {
+  padding: 0px;
+  list-style-type: none;
+  margin: 5px 10px 5px 0px;
+  text-align: right;
+}
+
+.movie_card__li {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.like {
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #ff0101;
+}
+
+.like:hover {
+  transform: scale(1.1);
+}
+
+.like:hover::before {
+  content: attr(data-content);
+  font-size: 0.7rem;
+  color: white;
+  position: relative;
+  top: -18px;
+  left: 16px;
+}
+
+.movie_card__title {
+  font-weight: 800;
+  color: white;
+  text-align: left;
+  font-size: 1.3rem;
+  position: relative;
+  top: 35%;
+  left: 5%;
+  word-wrap: break-word;
+}
+/* --------------- End of Card Styling -----------------------*/
