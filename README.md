@@ -14,6 +14,6 @@
 
 - Check out the Project into your local machine
 - Run `npm install` on the root folder. This installs json-server module which is required for the backend data
-- Run `npm run rest-server`
-- Double click on index.html which opens up in your default browser
-- Happy Browsing
+- Run `npm run rest-server` or `npm start` on root folder
+- Double click on index.html which opens up in your default browser or Access localhost:4000 on your browser
+- Happy Browsing the app
