@@ -227,7 +227,7 @@ function ajaxRequest(callback, resource) {
 // depending on the query params, constructs url and returns to ajaxRequest function
 function urlGenerator(resource) {
   // default url to call
-  var url = 'http://localhost:4010/';
+  var url = 'https://moviebizz.herokuapp.com:4010/';
   if (resource !== undefined) {
     url += 'info';
     return url;
