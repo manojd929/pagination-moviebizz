@@ -1,9 +1,10 @@
-const express = require('express');
-const app = express();
+const jsonServer = require('json-server');
+const server = jsonServer.create();
+const router = jsonServer.router('./rest-db/data.json');
+const middlewares = jsonServer.defaults();
+const port = process.env.PORT || 4010;
 
-app.use(express.static('public'));
+server.use(middlewares);
+server.use(router);
 
-const PORT = 4000 || process.env.PORT;
-app.listen(PORT, () => {
-  console.log(`Server Started listening at port ${PORT}...`)
-});
+server.listen(port);

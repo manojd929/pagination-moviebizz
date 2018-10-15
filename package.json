@@ -4,8 +4,7 @@
   "description": "moviebizz app",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js | npm run rest-server",
-    "rest-server": "json-server --port 4010 --watch rest-db/data.json"
+    "start": "node server.js"
   },
   "author": "manojd929",
   "license": "MIT",
